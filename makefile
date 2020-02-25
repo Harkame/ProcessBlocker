@@ -1,5 +1,5 @@
 GPP = g++
-OPTIONS = -mwindows
+OPTIONS = -std=c++17 -O3 -W -Wall -Weffc++ -Werror -pedantic -mwindows 
 
 all:
-	${GPP} ${OPTIONS} process_blocker.cpp -o myblocker.exe
+	${GPP} ${OPTIONS} process_blocker.cpp -o pb.exe

