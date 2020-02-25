@@ -1,7 +1,7 @@
 # ProcessBlocker
 Program that kill process regularly
 
-# Requirements
+## Requirements
 
 -   Windows
 
@@ -14,7 +14,6 @@ make
 ```
 
 ## Usage
-
 
 ``` bash
 

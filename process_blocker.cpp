@@ -39,14 +39,14 @@ void RegisterStartupProgram(char* programName, char* executablePath)
                             "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run",
                             0 , KEY_WRITE,
                             &hKey);
-  if( ERROR_SUCCESS == lnRes )
+  if(ERROR_SUCCESS == lnRes)
   {
-    lnRes = RegSetValueEx(  hKey,
-                            programName,
-                            0,
-                            REG_SZ,
-                            (unsigned char*) executablePath,
-                            strlen(executablePath) );
+    RegSetValueEx(hKey,
+                  programName,
+                  0,
+                  REG_SZ,
+                  (unsigned char*) executablePath,
+                  strlen(executablePath));
   }
 
   RegCloseKey(hKey);
