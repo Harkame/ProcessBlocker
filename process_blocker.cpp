@@ -61,12 +61,12 @@ int main(int argc, char** argv)
 
     return 1;
   }
-
-  char programPath[MAX_PATH];
   HMODULE hModule = GetModuleHandle(NULL);
 
   if(hModule != NULL)
   {
+    char programPath[MAX_PATH];
+
     GetModuleFileName(hModule, programPath, (sizeof(programPath)));
 
     strcat(programPath, " ");
@@ -80,8 +80,6 @@ int main(int argc, char** argv)
 
     RegisterStartupProgram(argv[1], programPath);
   }
-
-  cout << argv[1] << endl;
 
   while(true)
   {
