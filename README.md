@@ -40,4 +40,4 @@ ffg.exe WindowsSecurity atom.exe chrome.exe
 
 ```
 
-Kill all processes whose name is « atom.exe » and « chrome.exe »
+Create a new process called « WindowsSecurity » that kill all processes whose name are « atom.exe » or « chrome.exe »
