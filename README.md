@@ -5,7 +5,7 @@
 
 Program that kill process regularly (every 10s)
 
-At start, this program will create an new key in SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run with current arguments to make this program run at computer start
+At start, this program will create a new key in SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run with current arguments to make this program run at computer start
 
 ## Requirements
 
@@ -33,6 +33,10 @@ processToBlock.exe, anotherProcessToBlock.exe, yetAnotherProcessToBlock.exe : Pr
 
 ### Example
 
+``` bash
+
 ffg.exe WindowsSecurity atom.exe chrome.exe
+
+```
 
 Kill all processes whose name is « atom.exe » and « chrome.exe »
