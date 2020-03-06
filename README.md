@@ -5,7 +5,7 @@
 
 Program that kill process regularly (every 10s)
 
-At start, this program will create a new key in SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run with current arguments to make this program run at computer start
+At start, this program will create a new key in « SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run » with current arguments to make this program run at computer start
 
 ## Requirements
 
