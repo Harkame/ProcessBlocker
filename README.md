@@ -10,6 +10,7 @@ At start, this program will create a new key in SOFTWARE\\Microsoft\\Windows\\Cu
 ## Requirements
 
 -   Windows
+-   g++
 
 ## Installation
 
