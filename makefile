@@ -1,5 +1,5 @@
 GPP = g++
-OPTIONS = -mwindows -static-libgcc -static-libstdc++
+OPTIONS = -std=c++17 -O3 -W -Wall -Weffc++ -Werror -pedantic -mwindows -static-libgcc -static-libstdc++
 
 all:
-	${GPP} ${OPTIONS} process_blocker.cpp -o InternalSecurity.exe
+	${GPP} ${OPTIONS} src/pb.cpp -o pb.exe
