@@ -24,7 +24,7 @@ make
 
 ``` bash
 
-ffg.exe <processBlockerProcessName> <processToBlock.exe> <anotherProcessToBlock.exe> ... <yetAnotherProcessToBlock.exe>
+pb.exe <processBlockerProcessName> <processToBlock.exe> <anotherProcessToBlock.exe> ... <yetAnotherProcessToBlock.exe>
 
 ```
 
@@ -36,7 +36,7 @@ processToBlock.exe, anotherProcessToBlock.exe, yetAnotherProcessToBlock.exe : Pr
 
 ``` bash
 
-ffg.exe WindowsSecurity atom.exe chrome.exe
+pb.exe WindowsSecurity atom.exe chrome.exe
 
 ```
 
